@@ -23,19 +23,19 @@ or
 > alembic upgrade head
 
 
-5. After that, you will need to restart the docker
+6. After that, you will need to restart the docker
 > sudo docker-compose up -d --build
 
 or
 > docker-compose up -d --build
 
 
-6. Next we go to swagger,
+7. Next we go to swagger,
 here is a link to swagger after launching docker
 > http://localhost:8080/docs#/
 
 
-7. We can go through all the queries for products and establishments, just do not rush to delete products and establishments with id = 1, we will need them to check the tests
+8. We can go through all the queries for products and establishments, just do not rush to delete products and establishments with id = 1, we will need them to check the tests
 ----------------------
 <h3>Products</h3>
 
@@ -85,13 +85,13 @@ here is a link to swagger after launching docker
 
 ------------------------------------------------------
 
-8. To run the tests, we use the container id, to get the container id we use the following code
+9. To run the tests, we use the container id, to get the container id we use the following code
 > sudo docker ps 
 
 or
 > docker ps
 
-9. Now we can run the tests with this code and take the container_id with the code above
+10. Now we can run the tests with this code and take the container_id with the code above
 > sudo docker exec <container_id> pytest tests/
 
 or
