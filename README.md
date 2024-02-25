@@ -12,15 +12,22 @@
 > pip install -r requirements.txt
 
 
-4. Then you need to create tables in the database
-> alembic upgrade head
-
-
-5. Then we can launch our website using docker
+4. Then we can launch our website using docker
 > sudo docker-compose up -d --build
 
 or
-> docker-compose up -d --build 
+> docker-compose up -d --build
+
+
+5. Then you need to create tables in the database
+> alembic upgrade head
+
+
+5. After that, you will need to restart the docker
+> sudo docker-compose up -d --build
+
+or
+> docker-compose up -d --build
 
 
 6. Next we go to swagger,
