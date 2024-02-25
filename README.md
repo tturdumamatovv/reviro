@@ -4,19 +4,31 @@
 > git@github.com:tturdumamatovv/reviro.git
 
 
-2. Then we can launch our website using docker
+2. Here we create a virtual environment (for linux)
+> python3 -m venv venv
+
+
+3. Next, download all the libraries
+> pip install -r requirements.txt
+
+
+4. Then you need to create tables in the database
+> alembic upgrade head
+
+
+5. Then we can launch our website using docker
 > sudo docker-compose up -d --build
 
 or
 > docker-compose up -d --build 
 
 
-3. Next we go to swagger,
+6. Next we go to swagger,
 here is a link to swagger after launching docker
 > http://localhost:8080/docs#/
 
 
-4. We can go through all the queries for products and establishments, just do not rush to delete products and establishments with id = 1, we will need them to check the tests
+7. We can go through all the queries for products and establishments, just do not rush to delete products and establishments with id = 1, we will need them to check the tests
 ----------------------
 <h3>Products</h3>
 
@@ -66,13 +78,13 @@ here is a link to swagger after launching docker
 
 ------------------------------------------------------
 
-5. To run the tests, we use the container id, to get the container id we use the following code
+8. To run the tests, we use the container id, to get the container id we use the following code
 > sudo docker ps 
 
 or
 > docker ps
 
-6. Now we can run the tests with this code and take the container_id with the code above
+9. Now we can run the tests with this code and take the container_id with the code above
 > sudo docker exec <container_id> pytest tests/
 
 or
