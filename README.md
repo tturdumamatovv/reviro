@@ -7,6 +7,7 @@
 2. Here we create a virtual environment (for linux)
 > python3 -m venv venv
 
+
 To activate virtual environment
 > source venv/bin/activate
 
@@ -93,6 +94,7 @@ here is a link to swagger after launching docker
 
 or
 > docker ps
+
 
 10. Now we can run the tests with this code and take the container_id with the code above
 > sudo docker exec <container_id> pytest tests/
