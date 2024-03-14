@@ -22,6 +22,11 @@ To activate virtual environment
 or
 > docker-compose up -d --build
 
+### if you have an error message when loading the server, this is something like this: An error response from the daemon: the driver failed to program an external connection on the reviro-db-1 endpoint(21a1cb765b274c76a351695e38603557964631f587d945a6cf10f70cf88a73ab): Error when starting a custom proxy: listening tcp4 0.0.0.0:5432: binding: the address is already in use
+
+open the terminal and write this code: (with linux ctrl + alt + t)
+> sudo service postgresql stop
+
 
 5. Then you need to create tables in the database
 > alembic upgrade head
